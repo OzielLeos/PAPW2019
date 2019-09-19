@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="import" href="component.html">
+    <script src="Js/index.js"></script>
+    <title>Inicia sesion en Store</title>
+</head>
+
+<body>
+    <!-- Just an image -->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+                <img src="./img/logo-placeholder.png" width="60" height="60" alt="">
+        </a>
+    </nav>
+
+    <div class=" container my-5 col-11 col-sm-7 col-md-6 col-lg-5 col-xl-4">
+            <h1>Inicio de Sesion </h1>
+       <form method="get">  <!--action="action_page.php" -->
+            <div class="form-group">
+                <label for="exampleInputEmail1">Correo electronico</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Correo electronico" name="mail">
+                <small id="emailHelp" class="form-text text-muted"></small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+            </div>
+            <button type="submit" class="btn btn-primary"  >Iniciar sesion</button>
+        </form>
+
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+
+</body>
+
+</html>

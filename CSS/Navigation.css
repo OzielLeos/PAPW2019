@@ -1,0 +1,11 @@
+#UserDropDown.dropdown-menu{
+    min-width: 400px;
+    margin: auto;
+    }
+
+    .avatar {
+        vertical-align: middle;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+      }

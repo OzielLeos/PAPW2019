@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="import" href="/component.html">
+    <script src="JS/Registro.js"></script>
+    <script src="Js/index.js"></script>
+    <title>Registrate en Store</title>
+</head>
+
+<body>
+    <!-- Just an image -->
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="./img/logo-placeholder.png" width="60" height="60" alt="">
+        </a>
+    </nav>
+
+    <div class=" container my-5 col-11 col-sm-7 col-md-6 col-lg-5 col-xl-4">
+        <h1>Registrate </h1>
+        <form method="get">
+
+            <div class="row">
+                <div class="col">
+                    
+                </div>
+                <div class="col">
+                    </div>
+            </div>
+            <!--action="action_page.php" -->
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label for="exampleInputName">Nombre</label>
+                        <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp"
+                            placeholder="Nombre" name="Nombre">
+                        <small id="nameHelp" class="form-text text-muted">Ingresa tu nombre.</small>
+                    </div>
+                    <div class="col">
+                        <label for="exampleInputApellido">Apellidos</label>
+                        <input type="text" class="form-control " id="exampleInputApellido"
+                            aria-describedby="ApellidoHelp" placeholder="Apellidos" name="Apellido">
+                        <small id="ApellidoHelp" class="form-text text-muted">Ingresa tus Apellidos.</small>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Correo electronico</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                    placeholder="Correo electronico" name="mail">
+                <small id="emailHelp" class="form-text text-muted">Nunca compartiremos tu direccion de correo
+                    electronico.</small>
+            </div>
+            <div class="form-group">
+
+                <label for="exampleInputNickname">Nombre de usuario</label>
+                <input type="text" class="form-control " id="exampleInputNickname" aria-describedby="NickNameHelp"
+                    placeholder="Nombre de usuario" name="username">
+                <small id="NickNameHelp" class="form-text text-muted">Ingresa un nombre de usuario.</small>
+
+            </div>
+
+
+            <div class="form-group">
+                <label for="exampleInputPic">Avatar</label>
+                <div id="exampleInputPic">
+                    <div class="input-group image-preview mb-3">
+                        <div class="custom-file">
+                            <input type="file" accept="image/png, image/jpeg, image/gif" class="custom-file-input"
+                                id="inputGroupFile02" />
+                            <label class="custom-file-label" for="inputGroupFile02">Elegir Imagen</label>
+                        </div>
+                        <!-- <img id="blah" src="#" alt="your image" /> -->
+                        <!-- <div class="input-group-append">
+                                <button class="btn btn-primary">Upload</button>
+                            </div> -->
+                    </div>
+                    <script>
+                        $(function () {
+
+                            $('.image-preview').popover('hide');
+                            // Hover befor close the preview
+                            $('.image-preview').hover(
+                                function () {
+                                    $('.image-preview').popover('show');
+                                },
+                                function () {
+                                    $('.image-preview').popover('hide');
+                                }
+                            );
+                            // // Create the close button
+                            // var closebtn = $('<button/>', {
+                            //     type: "button",
+                            //     text: 'x',
+                            //     id: 'close-preview',
+                            //     style: 'font-size: initial;',
+                            // });
+                            //closebtn.attr("class", "close pull-right");
+                            // Set the popover default content
+                            $('.image-preview').popover({
+                                trigger: 'manual',
+                                html: true,
+                                // title: "<strong>Preview </strong>",// + $(closebtn)[0].outerHTML,
+                                content: "",
+                                placement: 'left',
+                                
+                            });
+                            // // Set the popover default content
+                            // $('.image-preview').popover({
+                            //     trigger: 'hover',
+                            //     html: true,
+                            //     title: "<strong>Preview</strong>" + $(closebtn)[0].outerHTML,
+                            //     content: "",
+                            //     placement: 'bottom'
+                            // });
+                        });
+                        $('#inputGroupFile02a').on('change', function (e) {
+                            //get the file name
+
+                            var fileName = e.target.files[0].name;
+                            $('.custom-file-label').html(fileName);
+
+                            // var img = $('<img/>', {
+                            //     id: 'dynamic'
+                            // });
+
+                            img.attr('src', e.target.result);
+                            // alert(e.target.result);
+                            $(".image-preview").attr("data-content", $(img)[0].outerHTML).popover("show");
+                        })
+
+                        function readURL(input) {
+                            if (input.files && input.files[0]) {
+                                $('.custom-file-label').html(input.files[0].name);
+
+                                var reader = new FileReader();
+                                var img = $('<img/>', {
+                                    id: 'dynamic', 
+                                   
+                                });
+                                reader.onload = function (e) {
+                                    //$('#blah').attr('src', e.target.result);
+
+                                    img.attr('src', e.target.result);
+                                    $(".image-preview").attr("data-content", $(img)[0].outerHTML).popover("show");
+
+                                }
+
+                                reader.readAsDataURL(input.files[0]);
+                            }
+                        }
+
+                        $("#inputGroupFile02").change(function () {
+                            readURL(this);
+                        });
+
+
+                        $('.image-preview').popover.css('background-color', 'red');
+                    </script>
+
+                </div>
+
+
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Contraseña">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword2">Contraseña</label>
+                <input type="password" class="form-control" id="exampleInputPassword2" aria-describedby="PasswordHelp"
+                    placeholder="Contraseña">
+                <small id="PasswordHelp" class="form-text text-muted">Las constraseñas deben coincidir.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputTelephone">Telefono</label>
+                <input type="tel" class="form-control" id="exampleInputTelephone" placeholder="Numero Telefonico">
+            </div>
+            <div class="form-group">
+                <label for="inputAddress">Direccion</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputCity">Ciudad</label>
+                    <input type="text" class="form-control" id="inputCity">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputState">Estado</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Elegir...</option>
+                        <option>New Lyon</option>
+                    </select>
+                </div>
+                <div class="form-group col-md">
+                    <label for="inputZip">CP</label>
+                    <input type="text" class="form-control" id="inputZip">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" href="index.html">Registrarse</button>
+        </form>
+
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+<style>
+
+#dynamic {
+    height: 50%;
+    width:  100%;
+    max-width: 120px;
+}
+</style>
+</body>
+
+</html>

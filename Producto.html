@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="import" href="./component.html">
+    <script src="./JS/index.js"></script>
+
+    <title>Producto</title>
+</head>
+
+<body>
+
+    <div id="nav-placeholder"></div>
+    <section class="container">
+
+
+        <div class="row">
+            <div class="col-3 ">
+
+                <h4>Categorias</h4>
+                <ul class="list-group  ">
+                    <li class="list-group-item">Categoria 0</li>
+                    <li class="list-group-item">Categoria 1</li>
+                    <li class="list-group-item">Categoria 2</li>
+                    <li class="list-group-item">Categoria 3</li>
+                    <li class="list-group-item">Categoria 4</li>
+                </ul>
+            </div>
+            <div class="col">
+
+                <div class="row">
+                    <div class="col-7 ">
+                        <div id="Gallery-placeholder"></div>
+                        <script>
+                            $("#Gallery-placeholder").load("./Item_Gallery.html");
+                        </script>
+                    </div>
+                    <div class="col ">
+                        <div class="card ">
+                            <div class="card-body">
+                                <h3 class="card-title">Producto / articulo</h3>
+                                <div class="col-md-6 text-warning">
+                                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                        class="fa fa-star"></i><i class="fa fa-star"></i>
+                                </div>
+                                <h3>$666.66</h3>
+                                <div class="input-group">
+                                    <select class="custom-select" id="inputGroupSelect04"
+                                        aria-label="Example select with button addon">
+                                        <option selected>Cantidad...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" type="button">Agregar al carrito</button>
+                                    </div>
+                                    <!-- <a href="#" class="btn ">Go somewhere</a> -->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col my-2">
+                        <div class="card">
+                            <div class="card-body">
+                                <h3 class="card-title">Descripcion</h3>
+                                Most HTML elements can be turned into a Cloud Zoom gallery elements. These will load different images into a Cloud Zoom instance.
+
+                                Here we've used some styled links, but you can create galleries in whatever style you want: basic links, images, carousels etc.
+                            </div>
+
+
+                       
+                            <div class="card-body">
+                                <h3 class="card-title"> Opiniones</h3>
+
+                                <div class="col-md-6 text-warning">
+                                    5.0
+                                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                        class="fa fa-star"></i><i class="fa fa-star"></i>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="footer-placeholder"></div>
+
+
+</body>
+
+</html>
